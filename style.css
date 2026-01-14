@@ -42,14 +42,15 @@ body {
 
 .auth-box button {
   width: 100%;
-  padding: 12px;
-  font-size: 1.1em;
+  padding: 16px;
+  font-size: 1.2em;
   background-color: rgb(100, 200, 255);
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   margin: 10px 0;
+  font-family: Arial, sans-serif;
 }
 
 .auth-box button:hover {
@@ -240,3 +241,4 @@ body {
   }
 
 }
+
