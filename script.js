@@ -43,7 +43,7 @@ const loadPage = (page) => {
     content.innerHTML = '<h1>Willkommen!</h1>';
   } else if (page === 'weather') {
     content.innerHTML = '<div id="weather-container"></div>';
-    getWeather('Braunschweig');
+    getWeather('Berlin');
   }
 };
 
