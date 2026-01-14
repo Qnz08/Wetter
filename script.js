@@ -35,7 +35,7 @@ let userEmail = null;
 
 // ActionCodeSettings für E-Mail-Link
 const actionCodeSettings = {
-  url: `https://qnz08.github.io/Wetter/index.html`,
+  url: `${window.location.origin}${window.location.pathname}`,
   handleCodeInApp: true
 };
 
@@ -354,6 +354,7 @@ const initApp = async () => {
 
 
 initApp();
+
 
 
 
