@@ -43,8 +43,9 @@ const actionCodeSettings = {
 window.sendSignInLink = async () => {
   console.log('sendSignInLink aufgerufen');
   
-  const emailInput = document.getElementById('home-email-input');
-  const authMessage = document.getElementById('home-auth-message');
+  // Versuche zuerst home-email-input, dann email-input
+  const emailInput = document.getElementById('home-email-input') || document.getElementById('email-input');
+  const authMessage = document.getElementById('home-auth-message') || document.getElementById('auth-message');
   
   console.log('emailInput:', emailInput);
   console.log('authMessage:', authMessage);
@@ -354,6 +355,7 @@ const initApp = async () => {
 
 
 initApp();
+
 
 
 
