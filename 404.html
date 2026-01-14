@@ -1,1 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seitenleiste und Inhaltsbereich</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  <div id="auth-container" class="auth-screen">
+    <div class="auth-box">
+      <h1>📝 Meine Notizen</h1>
+      <p>Melden Sie sich an, um Ihre Notizen geräteübergreifend zu synchronisieren:</p>
+      <input type="email" id="email-input" placeholder="E-Mail-Adresse eingeben...">
+      <button onclick="sendSignInLink()">🔗 Anmeldelink senden</button>
+      <p id="auth-message"></p>
+      <hr>
+      <p>Oder anonym weitermachen:</p>
+      <button onclick="loginAnonymously()" class="secondary-btn">👤 Anonym fortfahren</button>
+    </div>
+  </div>
+
+  <div id="app-container" class="app-screen" style="display: none;">
+    <div class="container">
+      <div class="sidebar">
+        <div class="sidebar-icon">☰</div>
+        <ul class="sidebar-menu">
+          <li><a href="#" onclick="loadPage('home'); return false;">🏠 Home</a></li>
+          <li><a href="#" onclick="loadPage('weather'); return false;">🌤️ Wetter</a></li>
+        </ul>
+      </div>
+      <div class="content" id="content"></div>
+    </div>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
