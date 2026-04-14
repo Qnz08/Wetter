@@ -286,6 +286,13 @@ window.loadPage = (page) => {
       </div>
       <div id="notes-list"></div>
     `;
+    const input = document.getElementById('note-input');
+    input.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+        e.preventDefault();
+        window.saveNote();
+        }
+    });
     loadNotes();
   } else if (page === 'weather') {
     content.innerHTML = '<div id="weather-container"></div>';
